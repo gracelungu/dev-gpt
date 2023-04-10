@@ -7,18 +7,15 @@ const proxy = async (req: NextApiRequest, res: NextApiResponse) => {
 
   try {
     // Forward the request to the target URL including the path
-    const response = await fetch(targetURL + req.url, {
+    const response = await fetch(targetURL, {
       method: req.method,
       body: req.body,
     });
 
-    // Copy the response headers from the target URL
-    response.headers.forEach((value, name) => {
-      res.setHeader(name, value);
-    });
+    console.log(response.body);
 
     // Forward the response from the target URL back to the client
-    res.status(response.status).send(await response.text());
+    res.status(response.status).send(response.body);
   } catch (error) {
     console.error('Error in proxy:', error);
     res.status(500).send('Error in proxy');
