@@ -7,7 +7,8 @@ servers:
 paths:
   /command:
     post:
-      summary: Execute a command
+      summary: Execute a command in the terminal
+      operationId: renderPage
       requestBody:
         required: true
         content:
