@@ -3,7 +3,7 @@ info:
   title: Command Executor API
   version: 1.0.0
 servers:
-  - url: https://wblo235iab.execute-api.eu-north-1.amazonaws.com/prod
+  - url: https://command-executor.vercel.app/api
 paths:
   /command:
     post:
