@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Command Executor",
+  "name_for_model": "command_executor",
+  "description_for_human": "Plugin for executing shell commands on a remote server and returning the output",
+  "description_for_model": "Plugin for executing shell commands on a remote server and returning the output, supports a variety of commands commonly used in software development",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://command-executor.vercel.app/api/spec",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://command-executor.vercel.app/logo.png",
+  "contact_email": "support@command-executor.vercel.app",
+  "legal_info_url": "https://command-executor.vercel.app/legal"
+}
